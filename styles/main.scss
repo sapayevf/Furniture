@@ -118,6 +118,7 @@
 .section-3 {
   padding: 50px 0;
   background-color: #f7f7f7;
+  margin-bottom: 400px;
   .products {
     display: flex;
     align-items: center;
@@ -125,7 +126,6 @@
     gap: 40px;
     margin-bottom: 40px;
   }
-
   .product {
     border-radius: 20px;
     width: 268px;
@@ -133,7 +133,6 @@
     background: #fff;
     padding: 21px;
     position: relative;
-
     &__title {
       p {
         font-family: var(--third-family);
@@ -141,7 +140,6 @@
         font-size: 16px;
         color: #8d8d8d;
       }
-
       b {
         font-family: var(--third-family);
         font-weight: 600;
@@ -150,18 +148,15 @@
         color: #0d1b39;
         margin-bottom: 5px;
       }
-
       img {
         margin-bottom: 26px;
       }
     }
-
     &__price {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 35px;
-
       button {
         border-radius: 31px;
         padding: 12px;
@@ -171,24 +166,17 @@
         cursor: pointer;
         border: none;
       }
-
       .dollar {
         position: relative;
         display: flex;
         align-items: center;
         gap: 5px;
-
         b {
-          font-family: var(--third-family);
           font-weight: 600;
           font-size: 21px;
           color: #0d1b39;
         }
-
         b:nth-child(1) {
-          // position: absolute;
-
-          font-family: var(--third-family);
           font-weight: 600;
           font-size: 15px;
           color: #0d1b39;
@@ -200,10 +188,185 @@
 }
 
 .section-4 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 400px;
+  background-color: #f9f9f9; // Yengil fond
   position: relative;
-  padding: 250px 0;
   .s4-img {
     position: absolute;
     left: 0;
+    width: 40%; // Rasmning kengligini moslashtirish
+    border-radius: 10px; // Burchaklarni yumaloqlash
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); // Yengil soyalar
+  }
+
+  .content {
+    position: absolute;
+    right: 150px;
+    h2 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    a {
+      font-size: 16px;
+      color: #e58411;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  // Rasm chap tarafda bo‘lishi uchun tartib
+  flex-direction: row-reverse;
+
+  // Responsive dizayn uchun
+  @media (max-width: 768px) {
+    flex-direction: column-reverse; // Mobilda tartib o'zgaradi
+    text-align: center;
+
+    .s4-img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.s5 {
+  .s5-img {
+    position: absolute;
+    right: 0;
+    width: 40%; // Rasmning kengligini moslashtirish
+    border-radius: 10px; // Burchaklarni yumaloqlash
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); // Yengil soyalar
+  }
+  .content-s5 {
+    left: 110px;
+  }
+}
+
+.section-6 {
+  margin-top: 100px;
+  .s6__title {
+    margin-bottom: 40px;
+  }
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    .card {
+      width: 31%;
+      height: 470px;
+      padding: 20px;
+      background-image: url(../assets/images/s6-card-img-1.png);
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+      position: relative;
+      &__title {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 91%;
+        height: 200px;
+        background-color: white;
+        border-radius: 20px;
+        .profile {
+          position: relative;
+          top: -30px;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          border: 8px solid #fff;
+          overflow: hidden;
+          display: block;
+          margin: 0 auto;
+        }
+        .profile_text {
+          margin-top: -25px;
+          h3 {
+            text-align: center;
+            font-size: 24px;
+          }
+          .Pedagang {
+            font-size: 14px;
+            color: #8a8989;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 10px;
+          }
+          .Terimakasih {
+            font-size: 16px;
+            color: #585858;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 15px;
+          }
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .bg2 {
+      background-image: url(../assets/images/s6-card-img-2.png);
+    }
+    .bg3 {
+      background-image: url(../assets/images/s6-card-img-3.png);
+    }
+  }
+}
+
+footer {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #f7f7f7;
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      a {
+        color: #5f5d5d;
+      }
+      .org-link {
+        color: #e58411;
+      }
+      .social-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+  .footer-last {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
