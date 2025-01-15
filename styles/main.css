@@ -179,6 +179,33 @@ body {
   color: #e58411;
 }
 
+.menu-container {
+  width: 382px;
+  display: flex;
+  background-color: #eeeeee;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.menu-container .menu-item {
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.menu-container .menu-item:hover {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.menu-container .menu-item.active {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
 .section-3 {
   padding: 50px 0;
   background-color: #f7f7f7;
@@ -198,15 +225,17 @@ body {
   background: #fff;
   padding: 21px;
   position: relative;
+  transition: all 0.2s ease;
+}
+.section-3 .product:hover {
+  transform: scale(1.04);
 }
 .section-3 .product__title p {
-  font-family: var(--third-family);
   font-weight: 400;
   font-size: 16px;
   color: #8d8d8d;
 }
 .section-3 .product__title b {
-  font-family: var(--third-family);
   font-weight: 600;
   font-size: 21px;
   text-transform: capitalize;
